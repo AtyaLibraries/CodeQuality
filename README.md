@@ -18,6 +18,14 @@ dotnet build .\CodeQuality.sln --configuration Release --no-restore --verbosity 
 dotnet pack .\src\CodeQuality\CodeQuality.csproj --configuration Release --no-build --verbosity minimal
 ```
 
+## Publishing
+
+Packages are published to nuget.org automatically when changes are merged into `master`.
+
+Configure a GitHub Actions repository secret named `NUGET_API_KEY` with a nuget.org API key that has permission to push `Atya.Governance.CodeQuality`.
+
+NuGet package versions are immutable. Update the package `<Version>` in `src/CodeQuality/CodeQuality.csproj` before merging a release change, otherwise nuget.org will reject the already-published version.
+
 ## Layout
 
 - `src/CodeQuality` - NuGet package project and packaged analyzer configuration.
