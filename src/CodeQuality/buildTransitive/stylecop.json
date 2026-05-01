@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "orderingRules": {
+      "usingDirectivesPlacement": "outsideNamespace",
+      "systemUsingDirectivesFirst": true,
+      "blankLinesBetweenUsingGroups": "omit",
+      "elementOrder": [
+        "kind",
+        "accessibility",
+        "constant",
+        "static",
+        "readonly"
+      ]
+    },
+    "layoutRules": {
+      "newlineAtEndOfFile": "require",
+      "allowConsecutiveUsings": true,
+      "allowDoWhileOnClosingBrace": false
+    },
+    "namingRules": {
+      "allowCommonHungarianPrefixes": false,
+      "tupleElementNameCasing": "PascalCase"
+    },
+    "documentationRules": {
+      "companyName": "Atya"
+    },
+    "maintainabilityRules": {
+      "topLevelTypes": [
+        "class",
+        "interface",
+        "struct",
+        "enum",
+        "delegate"
+      ]
+    }
+  }
+}

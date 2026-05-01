@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11709.129 insiders
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeQuality", "src\CodeQuality\CodeQuality.csproj", "{8B2FE511-D12A-464F-8926-015CD2584A51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{5D20AA90-6969-D8BD-9DCD-8634F4692FDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeQuality.Sample.Console", "samples\CodeQuality.Sample.Console\CodeQuality.Sample.Console.csproj", "{0C06B29B-A20D-4428-8107-40CC53F7D189}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{C3BD7F1E-5EF8-46BE-B887-0FAFB862A3C8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+		LICENSE = LICENSE
+		LOCAL_NUGET.md = LOCAL_NUGET.md
+		Publish-LocalNuGet.ps1 = Publish-LocalNuGet.ps1
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Debug|x64.Build.0 = Debug|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Debug|x86.Build.0 = Debug|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Release|x64.ActiveCfg = Release|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Release|x64.Build.0 = Release|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Release|x86.ActiveCfg = Release|Any CPU
+		{8B2FE511-D12A-464F-8926-015CD2584A51}.Release|x86.Build.0 = Release|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Debug|x64.Build.0 = Debug|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Debug|x86.Build.0 = Debug|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Release|x64.ActiveCfg = Release|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Release|x64.Build.0 = Release|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Release|x86.ActiveCfg = Release|Any CPU
+		{0C06B29B-A20D-4428-8107-40CC53F7D189}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B2FE511-D12A-464F-8926-015CD2584A51} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{0C06B29B-A20D-4428-8107-40CC53F7D189} = {5D20AA90-6969-D8BD-9DCD-8634F4692FDA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D0F11B6-3C50-4FD1-8E91-A8766BCA4C65}
+	EndGlobalSection
+EndGlobal

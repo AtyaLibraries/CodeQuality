@@ -1,0 +1,11 @@
+<Project>
+    <PropertyGroup>
+        <EnableNETAnalyzers Condition="'$(EnableNETAnalyzers)' == ''">true</EnableNETAnalyzers>
+        <EnforceCodeStyleInBuild Condition="'$(EnforceCodeStyleInBuild)' == ''">true</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)Atya.Governance.CodeQuality.globalconfig" />
+        <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Visible="false" />
+    </ItemGroup>
+</Project>

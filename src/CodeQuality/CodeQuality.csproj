@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>Atya.Governance.CodeQuality</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Arsen Asulyan</Authors>
+        <Description>Centralized reusable StyleCop + .NET analyzer configuration for Atya repositories.</Description>
+        <PackageTags>dotnet;analyzers;stylecop;codequality;roslyn;governance</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <IsPackable>true</IsPackable>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <IncludeSymbols>false</IncludeSymbols>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" GeneratePathProperty="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="buildTransitive/Atya.Governance.CodeQuality.props" Pack="true" PackagePath="buildTransitive/" />
+
+        <None Include="buildTransitive/Atya.Governance.CodeQuality.globalconfig" Pack="true" PackagePath="buildTransitive/" />
+
+        <None Include="buildTransitive/stylecop.json" Pack="true" PackagePath="buildTransitive/" />
+
+        <None Include="CODING_STYLE.md" Pack="true" PackagePath="docs/" />
+
+        <None Include="$(PkgStyleCop_Analyzers)\analyzers\dotnet\cs\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs/" />
+    </ItemGroup>
+</Project>

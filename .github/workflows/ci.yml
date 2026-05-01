@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore .\CodeQuality.sln --verbosity minimal
+
+      - name: Build
+        run: dotnet build .\CodeQuality.sln --configuration Release --no-restore --verbosity minimal
+
+      - name: Pack
+        run: dotnet pack .\src\CodeQuality\CodeQuality.csproj --configuration Release --no-build --verbosity minimal
