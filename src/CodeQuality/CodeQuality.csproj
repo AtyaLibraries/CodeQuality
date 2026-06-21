@@ -6,6 +6,7 @@
     <AssemblyName>Atya.Governance.CodeQuality</AssemblyName>
     <RootNamespace>Atya.Governance.CodeQuality</RootNamespace>
     <IsPackable>true</IsPackable>
+    <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
     <Authors>Arsen Asulyan</Authors>
     <Copyright>Copyright (c) 2026 Arsen Asulyan</Copyright>
     <Description>Centralized reusable StyleCop and .NET analyzer configuration for Atya repositories.</Description>
