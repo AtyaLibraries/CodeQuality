@@ -1,30 +1,21 @@
-name: CI
+﻿name: CI
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [development, master]
   pull_request:
+    branches: [development, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
 
 jobs:
-  build:
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 10.0.x
-
-      - name: Restore
-        run: dotnet restore .\CodeQuality.sln --verbosity minimal
-
-      - name: Build
-        run: dotnet build .\CodeQuality.sln --configuration Release --no-restore --verbosity minimal
-
-      - name: Pack
-        run: dotnet pack .\src\CodeQuality\CodeQuality.csproj --configuration Release --no-build --verbosity minimal
+  ci:
+    uses: AtyaLibraries/github-workflows/.github/workflows/dotnet-package-ci.yml@v1
+    with:
+      solution: ./CodeQuality.sln
+      test-project: ./tests/CodeQuality.UnitTests/CodeQuality.UnitTests.csproj
+      package-project: ./src/CodeQuality/CodeQuality.csproj
+      allow-empty-coverage: true
