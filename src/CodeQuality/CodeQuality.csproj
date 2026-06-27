@@ -8,6 +8,7 @@
     <IsPackable>true</IsPackable>
     <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
     <Authors>Arsen Asulyan</Authors>
+    <Company>Atya</Company>
     <Copyright>Copyright (c) 2026 Arsen Asulyan</Copyright>
     <Description>Centralized reusable StyleCop and .NET analyzer configuration for Atya repositories.</Description>
     <PackageTags>dotnet;analyzers;stylecop;codequality;roslyn;governance</PackageTags>
@@ -20,12 +21,13 @@
     <NoWarn>$(NoWarn);NU5128</NoWarn>
 
     <!-- MinVer derives the version from git tags (e.g. tag `v1.2.3` -> 1.2.3). -->
+    <MinVerTagPrefix>v</MinVerTagPrefix>
     <MinVerDefaultPreReleaseIdentifiers>alpha.0</MinVerDefaultPreReleaseIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="" />
-    <None Include="..\..\LICENSE" Pack="true" PackagePath="" Visible="false" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" Visible="false" />
     <None Include="buildTransitive/Atya.Governance.CodeQuality.props" Pack="true" PackagePath="buildTransitive/" />
     <None Include="buildTransitive/Atya.Governance.CodeQuality.globalconfig" Pack="true" PackagePath="buildTransitive/" />
     <None Include="buildTransitive/stylecop.json" Pack="true" PackagePath="buildTransitive/" />
