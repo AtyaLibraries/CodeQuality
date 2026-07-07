@@ -2,4 +2,7 @@
   <PropertyGroup>
   </PropertyGroup>
   <!-- Framework, analyzers, and default test packages are provided by Atya.Build.Sdk. -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CodeQuality\CodeQuality.csproj" />
+  </ItemGroup>
 </Project>
