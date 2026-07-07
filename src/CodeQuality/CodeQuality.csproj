@@ -6,6 +6,7 @@
     <AssemblyName>Atya.Governance.CodeQuality</AssemblyName>
     <RootNamespace>Atya.Governance.CodeQuality</RootNamespace>
     <IsPackable>true</IsPackable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <PackageValidationBaselineVersion>1.1.0</PackageValidationBaselineVersion>
     <Authors>Arsen Asulyan</Authors>
     <Company>Atya</Company>
@@ -31,6 +32,7 @@
     <None Include="buildTransitive/Atya.Governance.CodeQuality.props" Pack="true" PackagePath="buildTransitive/" />
     <None Include="buildTransitive/Atya.Governance.CodeQuality.globalconfig" Pack="true" PackagePath="buildTransitive/" />
     <None Include="buildTransitive/stylecop.json" Pack="true" PackagePath="buildTransitive/" />
+    <AdditionalFiles Include="buildTransitive/stylecop.json" Visible="false" />
     <None Include="CODING_STYLE.md" Pack="true" PackagePath="docs/" />
     <None Include="$(PkgStyleCop_Analyzers)\analyzers\dotnet\cs\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs/" />
   </ItemGroup>

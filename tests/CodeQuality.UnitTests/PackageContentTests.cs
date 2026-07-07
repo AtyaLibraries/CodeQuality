@@ -1,3 +1,5 @@
+using Atya.Governance.CodeQuality;
+
 namespace Atya.Governance.CodeQuality.UnitTests;
 
 public sealed class PackageContentTests
@@ -15,10 +17,11 @@ public sealed class PackageContentTests
             "..",
             "src",
             "CodeQuality",
-            "buildTransitive"));
+            CodeQualityPackageAssets.BuildTransitiveDirectoryName));
 
-        File.Exists(Path.Combine(buildTransitivePath, "Atya.Governance.CodeQuality.props")).Should().BeTrue();
-        File.Exists(Path.Combine(buildTransitivePath, "Atya.Governance.CodeQuality.globalconfig")).Should().BeTrue();
-        File.Exists(Path.Combine(buildTransitivePath, "stylecop.json")).Should().BeTrue();
+        foreach (string fileName in CodeQualityPackageAssets.BuildTransitiveAssetFileNames)
+        {
+            File.Exists(Path.Combine(buildTransitivePath, fileName)).Should().BeTrue();
+        }
     }
 }
